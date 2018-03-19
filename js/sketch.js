@@ -1,19 +1,15 @@
 let words = [];
 let initials = ["Pol", "Valverde"];
+let random;
 
 function setup() {
-    words.push(initials[Math.floor(random(0, 2))]);
-    $('#hola').html("/* <b><i>" + words[0] + "</i></b> */");
+    random = new RandomWords(initials);
 }
 
 function draw() {
     if (!final()) {
-        let similars = RiTa.similarByLetter(words[words.length - 1]);
-        let randomIndex = Math.floor(random(0, similars.length));
-        if (words.length == 1) words[0] = "<b><i>" + words[0] + "</i></b>";
-        words.push(similars[randomIndex]);
-        let text = words.reduce((text, word) => text + " " + word);
-        $('#hola').html("/* " + text + " */");
+        random.update();
+        random.print('#hola', "/*", "*/");
         if (middle()) $('body').css("background-color", "rgb(255, 255, 255)");
     } else {
         $('#hola').append(" <b><i>Pol Valverde i Valverde / Interaction Designer</i></b>");
