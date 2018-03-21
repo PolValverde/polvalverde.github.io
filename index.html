@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Pol Valverde i Valverde</title>
     <script src="./libs/p5/p5.min.js"></script>
+    <script src="./libs/p5/addons/p5.dom.min.js"></script>
+    <script src="./libs/p5/addons/p5.sound.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script src="./libs/p5/addons/rita-full.min.js"></script>
-    <script src="./js/RandomWords.js"></script>
+    <!-- <script src="./libs/p5/addons/rita-full.min.js"></script> -->
+    <script src="./js/PolValverde-Objects.js"></script>
     <script src="./js/sketch.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900" rel="stylesheet">
     <style>
-        body {
-            background-color: rgb(0, 0, 50);
-            transition: all 2s;
-        }
 
-        .hola {
+        #hola {
             width: 100vw;
             height: 100vh;
-            padding: 20px;
+            padding: 0;
             color: rgb(91, 91, 138);
             font-family: 'Source Code Pro', monospace;
             font-style: italic;
@@ -29,15 +28,14 @@
             box-sizing: border-box;
             font-size: 13px;
             line-height: 16px;
-        }
+            z-index: -1000;
+        } 
+        
     </style>
 </head>
 
 <body>
-    <div class="hola">
-        <p id="hola">
-
-        </p>
+    <div id="hola">
     </div>
 </body>
 
