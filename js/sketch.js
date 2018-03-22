@@ -54,8 +54,8 @@ let colors = [{
 }];
 
 function preload() {
-    soundFormats('wav');
-    song = loadSound("./assets/song.wav");
+    soundFormats('mp3');
+    song = loadSound("./assets/song.mp3");
     background = new p5.Phrase('background', changeBackground, sequence);
     execute = new p5.Part();
     execute.addPhrase(background);
@@ -109,7 +109,6 @@ function draw() {
         execute.stop();
         $('body').css("background-color", `white`);
         loop = false;
-        fill(255, 0, 0);
     }
 
 }
@@ -119,6 +118,4 @@ function changeBackground() {
     $('body').css("background-color", `rgb(${colors[randomColor].r},${colors[randomColor].g},${colors[randomColor].b}`);
     div.position(Math.random() * width, Math.random() * height);
     sign.position(Math.random() * width, Math.random() * height);
-
-
 }
