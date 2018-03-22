@@ -63,4 +63,10 @@ class dot {
         noStroke();
         ellipse(this.x, this.y, this.diameter);
     }
+
+    randomDraw() {
+        fill(this.r, this.g, this.b);
+        noStroke();
+        ellipse(Math.random()*width, Math.random()*height, this.diameter);
+    }
 }

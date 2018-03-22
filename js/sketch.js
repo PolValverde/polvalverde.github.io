@@ -92,24 +92,24 @@ function draw() {
     time = song.currentTime();
     clear();
 
-    spiral.map(dot => dot.update(spiral));
-    spiral.map(dot => dot.draw())
-    spiral.push(new dot(spiral, colors, diameter, ratio, max));
-
     if (time > 27.5) {
         sign.style("color", "white");
         if (loop == false) {
             execute.loop();
             loop = true;
         }
+        spiral.map(dot => dot.randomDraw())
     } else if (time <= 27.5) {
+        spiral.map(dot => dot.update(spiral));
+        spiral.map(dot => dot.draw())
+        spiral.push(new dot(spiral, colors, diameter, ratio, max));
         div.center();
         sign.style("color", "red");
-        sign.position(30,30);
+        sign.position(30, 30);
         execute.stop();
         $('body').css("background-color", `white`);
         loop = false;
-        fill(255,0,0);
+        fill(255, 0, 0);
     }
 
 }
