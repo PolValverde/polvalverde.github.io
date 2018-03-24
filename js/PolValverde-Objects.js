@@ -25,26 +25,22 @@ class dot {
 
     constructor(array, colors, diameter, distanceIndex, max, angle) {
         this.n = 0;
-        if (!array[0]) this.id = 0;
-        else this.id = array[array.length-1].id + 1;
+        this.id = (array[0]) ? array[array.length-1].id + 1 : 0;
         this.x = width / 2;
         this.y = height / 2;
-        this.colors = colors;
-        this.indexColor = this.id % this.colors.length;
-        this.r = this.colors[this.indexColor].r;
-        this.g = this.colors[this.indexColor].g;
-        this.b = this.colors[this.indexColor].b;
+        this.indexColor = this.id % colors.length;
+        this.r = colors[this.indexColor].r;
+        this.g = colors[this.indexColor].g;
+        this.b = colors[this.indexColor].b;
         this.diameter = diameter;
         this.c = distanceIndex;
         this.max = max;
-        if (!angle) this.angle = 137.5;
-        else this.angle = angle;
+        this.angle = (angle) ? angle : 137.5;
     }
 
     update(array) {
-        if (this.n === this.max) {
-            array.shift();
-        } else {
+        if (this.n === this.max) array.shift()
+        else {
             // Dot angle, position multiplied by the default angle
             this.a = this.n * this.angle;
             // Radius, distance between the center of the skecth and the dot
