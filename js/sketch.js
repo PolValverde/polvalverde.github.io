@@ -79,7 +79,7 @@ function setup() {
     div.style("font-family", "Source Code Pro");
     div.style("font-weight", "800");
 
-    sign = createDiv('<b>Pol Valverde i Valverde</br>Interaction Designer</b></br>Coded with <a href="https://p5js.org" target="_blank">p5.js </a>');
+    sign = createDiv('<b>Pol Valverde i Valverde</br>Interaction & Graphic Designer</b></br><a href="mailto:hola@polvalverde.me">Say hello! :)</a>');
     sign.style("color", "white");
     sign.style("font-size", "18px");
     sign.style("font-family", "Source Code Pro");
