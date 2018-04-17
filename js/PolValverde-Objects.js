@@ -21,6 +21,7 @@ class RandomWords {
     }
 }
 
+// THIS CLASS REQUIRES P5.JS
 class dot {
 
     constructor(array, colors, diameter, distanceIndex, max, angle) {
@@ -43,11 +44,11 @@ class dot {
         else {
             // Dot angle, position multiplied by the default angle
             this.a = this.n * this.angle;
-            // Radius, distance between the center of the skecth and the dot
+            // Radius, distance between the center of the phillotaxis and the dot
             this.rad = this.c * sqrt(this.n);
-            // x position, radius times the cosinus of the poiint angle
+            // x position, radius times the cosinus of the point angle
             this.x = this.rad * cos(this.a) + width / 2;
-            // y position, radius times the sinus of the poiint angle
+            // y position, radius times the sinus of the point angle
             this.y = this.rad * sin(this.a) + height / 2;
             // Update n position
             this.n++;

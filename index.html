@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Pol Valverde i Valverde</title>
     <script src="./libs/p5/p5.min.js"></script>
@@ -13,7 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900" rel="stylesheet">
     <style>
-
         #hola {
             width: 100vw;
             height: 100vh;
@@ -29,11 +29,33 @@
             font-size: 13px;
             line-height: 16px;
             z-index: -1000;
-        } 
+        }
+
+        input {
+            background: none;
+            color: white;
+            font-weight: 800;
+            border: 0;
+            text-align: center;
+        }
+
+        input:focus {
+            border: 0;
+            outline: none;
+        }
+
+        input::-moz-placeholder {
+            color: white;
+        }
+
+        input::-webkit-input-placeholder {
+            color: white;
+        }
 
         a {
             color: inherit;
         }
+
         /* Hola */
     </style>
 </head>

@@ -73,13 +73,13 @@ function setup() {
 
     spiral.fill(new dot(spiral, colors, diameter, ratio, max));
 
-    div = createDiv("Pol Valverde!");
+    div = createDiv(`<input placeholder="Pol Valverde!">`);
     div.style("color", "white");
     div.style("font-size", "95px");
     div.style("font-family", "Source Code Pro");
     div.style("font-weight", "800");
 
-    sign = createDiv('<b>Pol Valverde i Valverde</br>Interaction & Graphic Designer</b></br><a href="mailto:hola@polvalverde.me">Say hello! :)</a>');
+    sign = createDiv('<b>Pol Valverde i Valverde</br>Interaction & Graphic Designer</b></br><a href="mailto:pol.valverde.valverde@gmail.com">Say hello! :)</a>');
     sign.style("color", "white");
     sign.style("font-size", "18px");
     sign.style("font-family", "Source Code Pro");
